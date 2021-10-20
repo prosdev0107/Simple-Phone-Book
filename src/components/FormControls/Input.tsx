@@ -10,9 +10,16 @@ type InputProps = {
 export const Input = (props: InputProps) => {
   const { name, onChange, type, value } = props;
   return (
-    <label>
+    <label data-testid="input-label">
       {name}: &nbsp;
-      <input className="border border-indigo-600" type={type} name={name} value={value} onChange={onChange} />
+      <input
+        data-testid={`input-${name}`}
+        className="border border-indigo-600"
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
+      />
     </label>
   );
 };

@@ -41,7 +41,7 @@ export const ContactList = () => {
   );
 
   return (
-    <div className="mt-5">
+    <div data-testid="contact-list" className="mt-5">
       <div className="flex items-center">
         <ContactForm onSubmit={handleSubmit} />
       </div>
@@ -77,7 +77,7 @@ export const ContactList = () => {
           </thead>
           <tbody>
             {filteredContacts.map((contact) => (
-              <tr key={contact.id}>
+              <tr data-testid="table-item" key={contact.id}>
                 <td className="border border-black p-1">{contact.firstName}</td>
                 <td className="border border-black p-1">{contact.lastName}</td>
                 <td className="border border-black p-1">
